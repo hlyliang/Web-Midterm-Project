@@ -1,6 +1,7 @@
 $(function () {
     let currentQuiz = null;
     $("#startButton").on("click", function () {
+        $("#startImage").hide();
         // console.log("Hello");
         if (currentQuiz == null) {
             currentQuiz = 0;
@@ -22,6 +23,7 @@ $(function () {
                         $("#question").text(finalAnswers[finalResult][0]);
                         $("#options").empty();
                         $("#options").append(`${finalAnswers[finalResult][1]}<br><br>`);
+                        $("#options").append(`<img src="${finalAnswers[finalResult][2]}">`); // 插入圖片
                         currentQuiz = null;
                         $("#startButton").attr("value", "重新開始");
                     } else {

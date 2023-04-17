@@ -146,7 +146,7 @@ $(document).on("keydown", function (event) {
                 currentImgMain.y = targetImg.y;
                 break;
             case 3: //Enemy
-                $("#talkBox").text("哈摟");
+                $("#talkBox").text("哈囉");
                 break;
         }
     } else {

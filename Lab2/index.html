@@ -9,10 +9,21 @@
 
 <body>
     <h1>社團課程時間表</h1>
+    <div>
+        <label for="startDate">開始日期:</label>
+        <input type="date" id="startDate" name="startDate" value="2023-02-21">
+        <button id="submitBtn">確定</button>
+    </div>
+    <div>
+        <label for="topic">主題:</label>
+        <input type="text" id="topic" name="topic">
+        <button id="addBtn">新增活動</button>
+    </div>
     <table id="courseTable"></table>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="topic.js"></script>
     <script src="main.js"></script>
+
 </body>
 
 </html>

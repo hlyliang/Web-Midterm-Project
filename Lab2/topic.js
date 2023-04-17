@@ -7,15 +7,25 @@ var topic = [
     "條件判斷"
 ];
 
+
+
+var startDate = new Date();
 var startDate = new Date();
 
-function setMonthAndDay(startMonth, startDay) {
-    //一次設定好月份與日期
-    startDate.setMonth(startMonth - 1, startDay);
+function setInitialDate(dateString) {
+    let year = dateString.substring(0, 4);
+    let month = dateString.substring(5, 7);
+    let day = dateString.substring(8, 10);
+    setMonthAndDay(parseInt(month), parseInt(day), parseInt(year));
+}
+
+function setMonthAndDay(month, day, year) {
+    startDate.setFullYear(year, month - 1, day);
     startDate.setHours(0);
     startDate.setMinutes(0);
     startDate.setSeconds(0);
 }
 
-setMonthAndDay(2, 21);
+
+    //setMonthAndDay(2, 28);
 
